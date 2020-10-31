@@ -35,18 +35,13 @@ crossorigin="anonymous"></script>
       <h1>Super Chat</h1>
     </header>
 
-    <section>
-      <div id="change_username">
-	<input id="userName" type="text" />
-	<button id="send_username" type="button">Change username</button>
-      </div>
-    </section>
+   
 
-    <section id="chatroom">
+
       
 
  
-        <ul class="ulz">
+        <ul>
           <%  let messageTotal = 0 %>
           <%  let likesTotal = 0 %>
 
@@ -105,26 +100,30 @@ crossorigin="anonymous"></script>
 
 
 
-      </section>
+     <section id="chatroom">
+      <section id="feedback"> </section>
+    <section>
+      <div id="change_username">
+	<input id="userName" type="text" />
+	<button id="send_username" type="button">Change username</button>
+      </div>
     </section>
 
-    
-
     <section id="input_zone"> 
-      <section id="feedback"> </section>
+
       <input id="message" class="vertical-align" type="text" /> 
     
       <button id="send_message" class="vertical-align" type="button">SendLIVE</button>
       
     </section>
-
+</section>
     <div class="navbarTop">
       <h2> <a href="/messages/">Home</a>
-       <a href="#news">Contacts</a>
+       
        <a href="#contact">Preferences</a>
        <a href="/messages/boards">Change Boards</a></h2>
        Total Messages: <%= messageTotal %>   Total Likes: <%= likesTotal %>
-
+       <button style="float:right;">  Open Live Chat</button>
       </div>
 
        <div class="navbar">
