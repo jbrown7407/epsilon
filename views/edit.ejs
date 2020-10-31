@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="/normalize.css">
+        <link rel="stylesheet" href="/skeleton.css">
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+       <div class="container">
+        <div class="banner">     <h1>Edit Log</h1></div>
+        <form action="/messages/<%=message._id%>?_method=PUT" method="POST">
+            Name: <input type="text" name="user" /><br/>
+            Message: <input type="text" name="message" /><br/>
+            <!-- SuperUser: <input type="checkbox" name="superUser" /><br/> -->
+         
+                <label for="name">Name</label>
+              original value="<%= message.name %>"/>
+             
+                <input type="submit" name="" value="Submit Changes"/>
+            </form>
+           
+        </form>
+    </div>    
+    </body>
+</html>

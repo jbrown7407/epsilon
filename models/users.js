@@ -6,7 +6,7 @@ const Schema = mongoose.Schema; // create a shorthand for the mongoose Schema co
 
 // Create a new Schema for User
 const userSchema = new Schema({
-    name:  { type: String, required: true, unique: true }, //can say whether we want properties to be required or unique
+    userName:  { type: String, required: true, unique: true }, //can say whether we want properties to be required or unique
     location: String,
     level: {type: Number, default: 1},
     password: { type: String, required: true, unique: true },
@@ -15,6 +15,6 @@ const userSchema = new Schema({
     tags: [{type: String}]
 }, {timestamps: true});
 
-const userSeed = mongoose.model('userSeed', userSchema)
+const userNameSeed = mongoose.model('userSeed', userSchema)
 
-module.exports = userSeed //use module.exports to export this mongoose.model
+module.exports = userNameSeed //use module.exports to export this mongoose.model

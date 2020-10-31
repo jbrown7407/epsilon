@@ -37,7 +37,7 @@ crossorigin="anonymous"></script>
 
     <section>
       <div id="change_username">
-	<input id="username" type="text" />
+	<input id="userName" type="text" />
 	<button id="send_username" type="button">Change username</button>
       </div>
     </section>
@@ -70,7 +70,7 @@ crossorigin="anonymous"></script>
              <img src="icon3.png" style="float:left" alt="i%2 =false">
        <%   }  %>
 
-       <a href="/messages/<%=allMessages[i].id %>">        <%=allMessages[i].user; %>:   </a>
+       <a href="/messages/<%=allMessages[i].id %>">        <%=allMessages[i].userName; %>:   </a>
        <div class="like" style="float:right">
         <form action="/messages/<%= allMessages[i].id %>?_method=PATCH" method="POST">
          <button style= "color:red">       <input type="submit" value="Like" /><i class="fas fa-heart"></i> <%= allMessages[i].likes; %> </button></form > 
@@ -131,7 +131,7 @@ crossorigin="anonymous"></script>
 
 
            <form action="/messages" method="POST" >
-               User: <input type="text" name="user" /><br/>
+               User: <input type="text" name="userName" /><br/>
                Message: <input type="text" name="message" maxlength="250" />
                <span class="highlighter">
                      <input type="submit" name="" value="Send"/></span>

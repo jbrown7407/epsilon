@@ -1,3 +1,4 @@
+
 const mongoose = require('mongoose')
 
 const messageSchema = new mongoose.Schema({
@@ -12,7 +13,6 @@ const Message = mongoose.model('Message', messageSchema)
 // const messageSeed = mongoose.model('messageSeed', messageSchema)
 
 module.exports = Message
-
 
 
 
